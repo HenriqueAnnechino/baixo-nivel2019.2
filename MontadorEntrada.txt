@@ -1,0 +1,13 @@
+lui $t4,2
+#ori $t0, $t1, 15
+label:
+add $t3,$t1,$t2 #ggg
+addi $t5,$r0,1
+bneq $t5,$t4 label
+sll $t1,$r0,2
+mult $t5,$t4
+label2:
+addi $a3,$r0,1
+beq $a3,$t5 end
+j label2
+end:
